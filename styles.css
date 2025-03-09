@@ -37,8 +37,8 @@ p {
 
 .banner-headline {
   width: 90%;
-  margin-left: 10%;
-  padding-top: 2%;
+  padding-left: 10%;
+  padding-top: 1%;
 }
 
 .banner-body h1 {
@@ -60,7 +60,7 @@ p {
   letter-spacing: 0.66vw;
   font-weight: 360;
   margin: 0;
-  padding: 0;
+  padding-left: 10%;
   width: auto;
   height: auto;
 }
