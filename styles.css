@@ -1,0 +1,388 @@
+/* Body */
+body {
+  background-color: rgb(242, 242, 242);
+  margin: 0px;
+  transition: background-color 0.5s ease;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.493);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(250, 250, 250, 0.171);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "lato", serif;
+  transition: background-color 0.25s ease;
+}
+
+/* Banner */
+.banner-body {
+  /* background-color: rgba(206, 206, 206, 0.493); */
+  z-index: 201;
+  max-width: 100%;
+  height: 128px;
+  position: relative;
+  display: block;
+}
+
+.banner-headline {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner-body h1 {
+  color: rgb(24, 24, 24);
+  font-family: "lato", serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.banner-body h2 {
+  color: rgb(24, 24, 24);
+  font-family: "epilogue", serif;
+  font-size: 22px;
+  letter-spacing: 0.66vw;
+  font-weight: 360;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+/* Content */
+.contents {
+  /* background-color: #c7d13b65; */
+  padding-left: 22px;
+  margin-top: 50px;
+  display: flex;
+}
+
+.contents h3{
+  color: rgb(24, 24, 24);
+  font-family: "epilogue", serif;
+  font-size: 22px;
+  letter-spacing: 0.25vw;
+  font-weight: 300;
+  margin: 0;
+  padding: 2px;
+  width: auto;
+  height: auto;
+}
+
+/* Tabs */
+.tabs {
+  /* background-color: #77d13b65; */
+  align-items: center;
+  padding-left: 22px;
+}
+
+.tab {
+  cursor: pointer;
+  margin: 0;
+  padding: 5px;
+}
+
+.tab.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.tab:hover {
+  color: rgb(241, 158, 158);
+  text-decoration: underline;
+}
+
+/* Color-adjustments Button Container */
+.color-adjustments {
+  /* background-color: #d1121236; */
+  display: flex;
+  justify-content: center;
+}
+
+.color-adjustments button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.color-adjustments button img {
+  background-color: #00000025;
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  transition: 0.25s ease;
+}
+
+.color-adjustments button img:hover {
+  border-radius: 50px;
+  scale: 1.1;
+}
+
+.color-adjustments button.active img {
+  opacity: 1;
+}
+
+/* Content */
+.content-container {
+  margin-top: 0px;
+}
+
+.content {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  padding: 0 0px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.content.active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  padding: 20px;
+}
+
+/* Project Display-Methods */
+.display-methods {
+  display: flex;
+  justify-content: center;
+}
+
+.display-methods img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%) invert(93%) sepia(96%) saturate(365%)
+    hue-rotate(313deg) brightness(99%) contrast(94%);
+}
+
+/* Showreel */
+.showreel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.video-container {
+  text-align: left;
+}
+
+/* Image Display Button Container */
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.button-container button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button-container button img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.button-container button.active img {
+  opacity: 1;
+}
+
+/* Thumbnail */
+.thumbnail {
+  transition: transform 0.2s ease, filter 0.5s ease;
+  /* filter: sepia(120%) contrast(75%); */
+}
+
+.thumbnail:hover {
+  /* filter: sepia(120%) contrast(75%); */
+}
+
+/* Grid Layout */
+#image-container.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#image-container.grid .thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#image-container.grid .thumbnail:hover {
+  transform: scale(1.05);
+}
+
+#image-container.grid .thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the container */
+  background-color: rgba(128, 128, 128, 0.1);
+  text-align: center;
+}
+
+/* Carousel Layout */
+#image-container.carousel {
+  margin: 0 auto;
+}
+
+#image-container.carousel .thumbnail:hover {
+  transform: scale(0.975);
+}
+
+#image-container.carousel .thumbnail img,
+.content-carousel .item img {
+  width: 100%;
+  height: 25vw;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 0px;
+  z-index: 1000;
+  overflow: hidden; /* Prevent the entire modal from scrolling */
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 3% auto;
+  padding: 32px;
+  padding-top: 10px;
+  border: 0px;
+  border-radius: 2%;
+  /* width: 80%; */
+  max-width: 55vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+/* Ensure the modal content doesn't overflow on small screens */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-height: 90vh;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: rgba(255, 0, 0, 0.562);
+}
+
+
+
+
+
+
+.owl-carousel .owl-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-50%);
+    margin: 0;
+    align-items: center;
+    top: 50%;
+}
+
+
+/* Custom Owl Carousel Navigation Buttons */
+.owl-carousel .owl-nav button {
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: #fff ;
+    border: none ;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 24px ;
+    line-height: 1 ;
+    border-radius: 15% ;
+    width: 48px ;
+    height: 48px ;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    pointer-events: all;
+}
+
+.owl-carousel .owl-nav button:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.owl-theme .owl-nav .owl-prev,
+.owl-theme .owl-nav .owl-next {
+  pointer-events: all;
+  position: relative;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: 20px;
+    transform: scaleX(-1);
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    left: -20px;
+}
+
+.owl-carousel .owl-nav button img{
+    filter: invert(100%);
+}
