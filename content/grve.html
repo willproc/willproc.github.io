@@ -2,8 +2,19 @@
   body {
     background-color: rgb(219, 8, 8);
   }
-  .content-carousel.grve_a .item img {
+  .content-carousel.a .item img {
     height: 20vw;
+  }
+  .single-image-container {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .single-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 </style>
 
@@ -17,17 +28,16 @@
     for the project i worked alongside with Cayenne Lau and Stephen Tang
   </p>
 
-  <div class="content-carousel grve_a">
-    <div id="uno" class="owl-carousel owl-theme">
-      <div class="item">
-        <img
-          class="owl-lazy"
-          data-src="media/grve/content/lower_FINAL_matte.jpg"
-          alt=""
-        />
-      </div>
-
-
-
+  <div class="single-image-container">
+    <img
+      src="media/grve/content/lower_FINAL_matte.jpg"
+      alt=""
+      class="single-image"
+    />
+    <img
+      src="media/grve/content/upper_FINAL_matte.png"
+      alt=""
+      class="single-image"
+    />
   </div>
 </body>
