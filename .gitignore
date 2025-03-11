@@ -1,7 +1,7 @@
 bin/
 backup/
 .vscode/
-index.html
+index.min.html
 carousel.css
 modal.css
 styles.css
