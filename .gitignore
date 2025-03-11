@@ -1,0 +1,9 @@
+bin/
+backup/
+.vscode/
+index.html
+carousel.css
+modal.css
+styles.css
+modal.js
+script.js

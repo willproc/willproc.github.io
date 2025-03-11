@@ -1,0 +1,139 @@
+<style>
+  .carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 10px auto 10px auto;
+    padding: 16px;
+    overflow: hidden;
+    border-radius: 7px;
+    /* background-color: rgba(172, 172, 172, 0.048); */
+  }
+  .modal-content {
+    position: relative;
+    background-color: #161616;
+    max-width: 50%;
+    overflow: auto;
+  }
+  .modal-content :is(h1, h2, h3, p) {
+    color: rgb(255, 228, 202);
+  }
+
+  .testrenders {
+    display: flex;
+    justify-content: center; /* Horizontally center the images */
+    flex-wrap: wrap; /* Allow wrapping when screen width is too small */
+    gap: 10px;
+    margin-bottom: 16px;
+    padding: 20px;
+  }
+
+  .testrenders img {
+    max-width: 100%; /* Ensure images don't overflow their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal-width columns */
+    align-items: center; /* Vertically center the images */
+    gap: 10px; /* Space between images */
+    width: 100%;
+  }
+
+  .image-container img {
+    max-width: 100%; /* Ensure images don't overflow their container */
+    height: auto;
+  }
+</style>
+
+<body>
+  <h1>Concept: Tower-Bridge Architecture Generator</h1>
+  <p>
+    Interconnecting towers with a solver for resolving intersecting bridges and
+    towers as it grows
+  </p>
+  <div class="testrenders">
+    <img src="media/htwn/content/testrender4.gif" alt="testrender4" />
+    <img src="media/htwn/content/testrender5.gif" alt="testrender5" />
+  </div>
+
+  <!--  -->
+  <div class="image-container">
+    <img
+      class="carousel-image project"
+      data-type="image"
+      src="media/htwn/content/BC_test_render4_0139.effectsResult.jpg"
+      data-src="media/htwn/content/BC_test_render4_0139.effectsResult.jpg"
+    />
+
+    <img
+      class="carousel-image project"
+      data-type="image"
+      src="media/htwn/content/BC_test_render4_0158.effectsResult.jpg"
+      data-src="media/htwn/content/BC_test_render4_0158.effectsResult.jpg"
+    />
+
+    <img
+      class="carousel-image project"
+      data-type="image"
+      src="media/htwn/content/BC_test_render5_0001.effectsResult.jpg"
+      data-src="media/htwn/content/BC_test_render5_0001.effectsResult.jpg"
+    />
+
+    <img
+      class="carousel-image project"
+      data-type="image"
+      src="media/htwn/content/stonemat.png"
+      data-src="media/htwn/content/stonemat.png"
+    />
+
+    <img
+      class="carousel-image project"
+      data-type="image"
+      src="media/htwn/content/testrender6.gif"
+      alt="ssf_props.1_fire_extinguishers.jpg"
+      data-src="media/htwn/content/testrender6.gif"
+    />
+
+    <img
+      class="carousel-image project"
+      data-type="image"
+      src="media/htwn/content/testrender1.gif"
+      alt="ssf_props.2_med-kits.jpg"
+      data-src="media/htwn/content/testrender1.gif"
+    />
+  </div>
+  <h2 style="margin-top: 50px">Parm Demos</h2>
+  <h3>towerWidth</h3>
+  <img
+    src="media/htwn/content/towerWidth.jpg"
+    alt=""
+    data-type="image"
+    data-src="media/htwn/content/towerWidth.jpg"
+    class="project"
+  />
+  <h3 style="margin-top: 10%">towerHeight</h3>
+  <img
+    src="media/htwn/content/towerHeight.jpg"
+    alt=""
+    data-type="image"
+    data-src="media/htwn/content/towerHeight.jpg"
+    class="project"
+  />
+  <h3 style="margin-top: 10%">roofHeight</h3>
+  <img
+    src="media/htwn/content/roofHeight.jpg"
+    alt=""
+    data-type="image"
+    data-src="media/htwn/content/roofHeight.jpg"
+    class="project"
+  />
+  <h3 style="margin-top: 10%">bridgeLength</h3>
+  <img
+    src="media/htwn/content/bridges.jpg"
+    alt=""
+    data-type="image"
+    data-src="media/htwn/content/bridges.jpg"
+    class="project"
+  />
+</body>
